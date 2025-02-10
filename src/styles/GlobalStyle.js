@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
  }
 
  :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Sour Gummy", serif; ;
 
 }
 
@@ -18,9 +18,6 @@ const GlobalStyle = createGlobalStyle`
   background-color: #FCCB4A;
  }
 
- html {
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
 
  ul {
   list-style: none;
@@ -46,7 +43,6 @@ const GlobalStyle = createGlobalStyle`
 
  button {
   border: none;
-  background-color: transparent;
   font: inherit;
   cursor: grab;
  }
