@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import Api from "./api/Api";
+// import Api from "./api/Api";
 import AppPageStyled from "./AppStyled";
 import image from "../src/assets/images/kero_logo.png";
 
@@ -11,7 +11,7 @@ function App() {
       <img className="kero-logo" src={image}></img>
       <p>El poder de las cartas Clow te llama!</p>
       <p> Introduce tu nombre y desata tu magia!</p>
-      <Api />
+      {/* <Api /> */}
     </AppPageStyled>
   );
 }
