@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 const List = ({ items }) => (
   <ul>
@@ -18,7 +19,6 @@ const List = ({ items }) => (
         {item.sakuraCard && (
           <img src={item.sakuraCard} alt="Sakura Card" width="50" />
         )}{" "}
-        {/* <p>{item.cardsReverse.clowReverse}</p> */}
         {item.cardsReverse.clowReverse && (
           <img
             src={item.cardsReverse.clowReverse}
@@ -43,7 +43,6 @@ const List = ({ items }) => (
   </ul>
 );
 
-// Componente de clase que maneja la obtención de datos desde una API
 class Api extends Component {
   constructor() {
     super();
@@ -54,17 +53,11 @@ class Api extends Component {
   }
 
   componentDidMount() {
-    fetch("https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/")
-      .then((result) => result.json())
-      .then((items) =>
-        this.setState({
-          done: true,
-          items,
-        })
-      )
-      .catch((error) => console.error("Error al obtener los datos:", error));
+    axios
+      .get("https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/")
+      .then(({ data }) => this.setState({ done: true, items: data }))
+      .catch();
   }
-
   render() {
     return (
       <div>
@@ -79,3 +72,4 @@ class Api extends Component {
 }
 
 export default Api;
+ 
