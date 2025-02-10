@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Container,
   LogoContainer,
@@ -37,4 +36,3 @@ const Header = () => {
 };
 
 export default Header;
-
