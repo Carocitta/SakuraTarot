@@ -16,9 +16,9 @@ const AppPageStyled = styled.main`
     padding: 20px;
   }
 
-  p {
+   p {
     font-size: 1.9rem;
   }
-  
+   
 `;
 export default AppPageStyled;

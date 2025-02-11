@@ -6,7 +6,7 @@ import {
   MenuItemLink,
   Wrapper,
 } from "./Header.elements";
-import logo from "../../assets/kero.png";
+import logo from "../../assets/images/kero.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
       <Wrapper>
         <LogoContainer>
           <img src={logo} alt="Sakura Tarot Logo" />
-          <p> SAKURA TAROT</p>
+          <p className="headerTitle"> SAKURA TAROT</p>
         </LogoContainer>
 
         <Menu>

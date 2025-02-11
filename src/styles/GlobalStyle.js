@@ -8,8 +8,19 @@ const GlobalStyle = createGlobalStyle`
  }
 
  :root {
+<<<<<<< HEAD
   :root {
   font-family:"Sour Gummy", serif; ;
+=======
+  font-family:"Sour Gummy", serif;
+
+--brown: #795743;
+--yellow: #fccb4a;
+--purple: #9083e3;
+--lightpurple: #d7b9fb;
+--black: #08090a;
+--white: #fff;
+>>>>>>> dev
 
 --brown: #795743;
 --yellow: #fccb4a;
@@ -22,10 +33,11 @@ const GlobalStyle = createGlobalStyle`
 
 }
 
- body,
- h1, h2, h3, h4, p {
+ 
+ body {
   margin: 0;
-  background-color: #FCCB4A;
+  background-color: var(--yellow);
+  
  }
 
 

@@ -1,11 +1,24 @@
+import DeckOfCards from "../components/DeckOfCards/DeckOfCards";
 import Header from "../components/Header/Header";
-import PickCard from "../components/PickCard/PickCard";
 
 function PickACard() {
   return (
     <>
       <Header />
-      <PickCard />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          height: "100%",
+        }}
+      >
+        <DeckOfCards />
+        <div className="subtitle" style={{ padding: "120px", fontSize: "24px", fontWeight: "bold" }}>
+        Caza tu fortuna del PASADO... 
+        ¡Elige una carta y descubre los secretos que te aguardan!
+        </div>
+      </div>
     </>
   );
 }

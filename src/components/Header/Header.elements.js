@@ -33,6 +33,10 @@ export const LogoContainer = styled.div`
   font-size: 3rem;
   font-weight: 700;
 
+  .headerTitle {
+font-size: 2rem;
+  }
+
   img {
     margin-right: 0.5rem;
     width: 80px;
