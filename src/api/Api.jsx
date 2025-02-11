@@ -92,8 +92,11 @@ class Api extends Component {
       .get("https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/")
       .then(({ data }) => this.setState({ done: true, items: data }))
       .catch();
+    axios
+      .get("https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/")
+      .then(({ data }) => this.setState({ done: true, items: data }))
+      .catch();
   }
-
   render() {
     if (!this.state.done) {
       return <p>Cargando resultados...</p>;
