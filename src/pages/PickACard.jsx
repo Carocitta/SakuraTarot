@@ -14,7 +14,7 @@ function PickACard() {
         }}
       >
         <DeckOfCards />
-        <div style={{ padding: "120px", fontSize: "24px", fontWeight: "bold" }}>
+        <div className="subtitle" style={{ padding: "120px", fontSize: "24px", fontWeight: "bold" }}>
         Caza tu fortuna del PASADO... 
         ¡Elige una carta y descubre los secretos que te aguardan!
         </div>
