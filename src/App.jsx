@@ -6,7 +6,7 @@ import Form from "./components/Form/Form";
 function App() {
   return (
     <AppPageStyled>
-      <Header />
+      {/* <Header /> */}
       <h1 className="main-title">SAKURA TAROT</h1>
       <img className="kero-logo" src={image}></img>
       <p>El poder de las cartas Clow te llama!</p>
