@@ -23,7 +23,7 @@ export default function pupUp () {
 
         <Popup isOpen={abierto}
         onClose={() => setAbierto(false)}>
-            <img src="/Pop-up/.png" alt="El juex Yung de Sakura"></img>
+            <img src="../../assets/images/yue.png" alt="El juex Yung de Sakura"></img>
             <p>Tú destino a sido cazado por el Juez Yue</p>
         </Popup>
         </div>
