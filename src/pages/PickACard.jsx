@@ -14,11 +14,13 @@ function PickACard() {
           flexDirection: "column",
           alignItems: "center",
           height: "100%",
+         
         }}
       >
         <DeckOfCards changeStep={changeStep} />
 
-        {step == "past" && <div className="subtitle" style={{ padding: "120px", fontSize: "24px", fontWeight: "bold" }}>
+        {step == "past" && <div className="subtitle" style={{
+        width: "50%", padding: "120px", fontSize: "24px", fontWeight: "bold" }}>
         Caza tu fortuna del PASADO... 
         ¡Elige una carta y descubre los secretos que te aguardan!
         </div>}
