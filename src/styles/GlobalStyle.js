@@ -8,10 +8,6 @@ const GlobalStyle = createGlobalStyle`
  }
 
  :root {
-<<<<<<< HEAD
-  :root {
-  font-family:"Sour Gummy", serif; ;
-=======
   font-family:"Sour Gummy", serif;
 
 --brown: #795743;
@@ -20,18 +16,9 @@ const GlobalStyle = createGlobalStyle`
 --lightpurple: #d7b9fb;
 --black: #08090a;
 --white: #fff;
->>>>>>> dev
-
---brown: #795743;
---yellow: #fccb4a;
---purple: #9083e3;
---lightpurple: #d7b9fb;
---black: #08090a;
---white: #fff;
 
 }
 
-}
 
  
  body {
