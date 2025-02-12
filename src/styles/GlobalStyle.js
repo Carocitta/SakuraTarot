@@ -19,9 +19,12 @@ const GlobalStyle = createGlobalStyle`
 
 }
 
+
+ 
  body {
   margin: 0;
   background-color: var(--yellow);
+  
  }
 
 

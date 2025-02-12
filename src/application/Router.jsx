@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
 import Historial from "../pages/Historial";
 import PickACard from "../pages/PickACard";
+import Reading from "../pages/Reading";
 
 function Router() {
   return (
@@ -17,4 +18,3 @@ function Router() {
 }
 
 export default Router;
-
