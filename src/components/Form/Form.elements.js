@@ -9,7 +9,7 @@ export const FormContainer = styled.div`
   border-radius: 5px;
   margin: 10px;
   bottom:4em;
-  }
+  
   p.butText{
     font-size: 1.4rem;
     display: flex;
