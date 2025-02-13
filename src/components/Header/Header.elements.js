@@ -11,7 +11,7 @@ export const Container = styled.div`
   background-color: var(--brown);
 
   @media (max-width: 767px) and (orientation: landscape) {
-    height: 50%;
+    height: 3rem;
   }
 `;
 
@@ -35,6 +35,9 @@ export const LogoContainer = styled.div`
 
   .headerTitle {
 font-size: 2rem;
+@media (max-width: 767px) and (orientation: landscape) {
+  font-size: 1.5rem;
+    }
   }
 
   img {
@@ -43,7 +46,7 @@ font-size: 2rem;
     height: auto;
 
     @media (max-width: 767px) and (orientation: landscape) {
-      width: 60px;
+      width: 50px;
     }
   }
 
