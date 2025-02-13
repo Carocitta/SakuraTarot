@@ -5,10 +5,10 @@ function Reading() {
   const { id } = useParams();  
   const location = useLocation();  
   console.log(location);
-  const name = location.state?.name || "Something went wrong";
-  const past = location.state?.past || "Something went wrong";
-  const present = location.state?.present || "Something went wrong";
-  const future = location.state?.future || "Something went wrong";
+  const name = location.state?.name || "Algo ha ido mal.";
+  const past = location.state?.past || "Algo ha ido mal.";
+  const present = location.state?.present || "Algo ha ido mal.";
+  const future = location.state?.future || "Algo ha ido mal.";
 
   return (
     <>

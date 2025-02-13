@@ -1,6 +1,5 @@
 // popupStyled.js
 import styled from 'styled-components';
-import Popup from './Pop-up';
 
 export const Overlay = styled.div`
   position: fixed;

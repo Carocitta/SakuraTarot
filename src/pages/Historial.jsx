@@ -17,8 +17,8 @@ function HistorialPages() {
         isOpen={abierto}
         onClose={() => setAbierto(false)}
       >
-        <img className="popImag" src="src/assets/images/yue.png" alt="El juex Yung de Sakura" ></img>
-        <p className="popText">Tú destino a sido cazado por el Juez Yue</p>
+        <img className="popImag" src="src/assets/images/yue.png" alt="El juez Yue de Sakura" ></img>
+        <p className="popText">Tu destino ha sido cazado por el Juez Yue</p>
       </Popup>
     </div>
   );

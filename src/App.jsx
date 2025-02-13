@@ -1,12 +1,10 @@
-import Header from "./components/Header/Header";
-import AppPageStyled from "./AppStyled";
+import AppPageStyled from "./App.elements";
 import image from "../src/assets/images/kero_logo.png";
 import Form from "./components/Form/Form";
 
 function App() {
   return (
     <AppPageStyled>
-      {/* <Header /> */}
       <h1 className="main-title">SAKURA TAROT</h1>
       <img className="kero-logo" src={image}></img>
       <p>El poder de las cartas Clow te llama!</p>
