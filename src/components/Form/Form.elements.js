@@ -10,14 +10,14 @@ export const FormContainer = styled.div`
   margin: 10px;
   bottom:4em;
   
-  p.butText{
+  p.buttonText{
     font-size: 1.4rem;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     justify-content: center;
   }
-  p.errText{
+  p.errorText{
     font-size: 0.8rem;
     color: red;
   }
