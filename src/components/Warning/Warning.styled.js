@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 const Overlay = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 30%;
-  height: 40%;
+
+  width: 40%;
+  height: 30%;
   background-color: var(--lightpurple);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  border-radius: 8px;
 `;
 
 const Message = styled.div`

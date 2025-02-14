@@ -1,7 +1,7 @@
 // src/hooks/useOrientation.js
 import { useState, useEffect } from 'react';
 
-export const useOrientation = () => {
+export const UseOrientation = () => {
   const [isPortrait, setIsPortrait] = useState(false);
 
   useEffect(() => {
