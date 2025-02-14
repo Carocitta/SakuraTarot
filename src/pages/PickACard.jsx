@@ -1,6 +1,8 @@
 import DeckOfCards from "../components/DeckOfCards/DeckOfCards";
 import Header from "../components/Header/Header";
 import { useState } from "react";
+import { Title, Subtitle } from "./PickACard.elements";
+
 
 function PickACard() {
   const [step, setStep] = useState("past")
@@ -14,26 +16,31 @@ function PickACard() {
           flexDirection: "column",
           alignItems: "center",
           height: "100%",
-         
+
         }}
       >
         <DeckOfCards changeStep={changeStep} />
 
-        {step == "past" && <div className="subtitle" style={{
-        width: "50%", padding: "120px", fontSize: "24px", fontWeight: "bold" }}>
-        Caza tu fortuna del PASADO... 
-        ¡Elige una carta y descubre los secretos que te aguardan!
-        </div>}
-        {step == "present" && <div className="subtitle" style={{ padding: "120px", fontSize: "24px", fontWeight: "bold" }}>
-        Caza tu fortuna del PRESENT... 
-        ¡Elige una carta y descubre los secretos que te aguardan!
-        </div>}
-        {step == "future" && <div className="subtitle" style={{ padding: "120px", fontSize: "24px", fontWeight: "bold" }}>
-        Caza tu fortuna del FUTURO... 
-        ¡Elige una carta y descubre los secretos que te aguardan!
-        </div>}
-       
 
+
+        {step === "past" && (
+          <Title>
+            Caza tu fortuna del PASADO...
+            <Subtitle>¡Elige una carta y descubre los secretos que te aguardan!</Subtitle>
+          </Title>
+        )}
+        {step === "present" && (
+          <Title>
+            Caza tu fortuna del PRESENTE con valentía... 
+            <Subtitle>¡Elige una carta y abre las puertas de tu brillante destino!</Subtitle>
+          </Title>
+        )}
+        {step === "future" && (
+          <Title>
+            El poder de las cartas te guían tu FUTURO...
+            <Subtitle>Eligiendo una carta. ¡Descubre qué magia te espera!</Subtitle>
+          </Title>
+        )}
       </div>
     </>
   );

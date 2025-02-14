@@ -8,7 +8,7 @@ const Form = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate(/*/pick-a-card*/);
+        navigate("/pick-a-card");
     };
   
     return (
