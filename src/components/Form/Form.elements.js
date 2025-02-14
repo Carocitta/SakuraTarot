@@ -17,6 +17,10 @@ export const FormContainer = styled.div`
     margin: 0;
     justify-content: center;
   }
+  p.errText{
+    font-size: 0.8rem;
+    color: red;
+  }
 `;
 
 export const Input = styled.input`
