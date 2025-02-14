@@ -50,22 +50,19 @@ const AppPageStyled = styled.main`
   @media screen and (max-width: 1024px) and (orientation: landscape) {
     .content-container {
       flex-direction: row;
-      justify-content: space-between;
       align-items: center;
     }
 
-    .text-container {
-      max-width: 50%;
-      text-align: left;
-      align-items: flex-start;
+    .title-container {
+      max-width: 80%;
     }
 
-    .image-container {
-      max-width: 50%;
+    .text-container {
+      max-width: 80%;
     }
 
     .kero-logo {
-      max-width: 80%;
+      max-width: 60%;
     }
 
     h1 {
@@ -73,7 +70,7 @@ const AppPageStyled = styled.main`
     }
 
     p {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
   }
 `;

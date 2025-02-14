@@ -6,10 +6,8 @@ function App() {
   return (
     <AppPageStyled>
       <div className="content-container">
-        <div className="text-container">
+        <div className="title-container">
           <h1 className="main-title">SAKURA TAROT</h1>
-        </div>
-        <div className="image-container">
           <img className="kero-logo" src={image}></img>
         </div>
         <div className="text-container">
