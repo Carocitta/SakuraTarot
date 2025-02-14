@@ -1,45 +1,53 @@
 import styled from "styled-components";
 
 const ReadinPageStyled = styled.section`
-  padding: 20px;
+  justify-items: center;
 
   .cards-container {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 15%;
+    margin-top: 10%;
+    width: 90%;
   }
 
   .card-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    width: fit-content;
+    height: fit-content;
   }
 
   .time-frame {
     color: #9083e3;
     font-size: 2rem;
+    font-weight: bold;
   }
 
   .time-frame-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-left: 10px;
-    margin-right: 10px;
+    max-width: 210px;
+    max-height: 351px;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .card-name {
     color: #795743;
     font-size: 1.5rem;
+    font-weight: bold;
   }
   .card-meaning {
     font-size: 1.5rem;
+    word-wrap: normal;
   }
 
   .button-quote-container {
     position: absolute;
-    bottom: 60px;
+    bottom: 10%;
+    left: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,12 +56,14 @@ const ReadinPageStyled = styled.section`
     font-size: 2rem;
   }
 
-  .save-readin-btn {
+  .save-reading-btn {
     border: none;
     background-color: inherit;
     display: inline-block;
     color: #9083e3;
     font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
   }
 `;
 export default ReadinPageStyled;

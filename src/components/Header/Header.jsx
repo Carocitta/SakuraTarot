@@ -29,11 +29,6 @@ const Header = () => {
               Historial
             </MenuItemLink>
           </MenuItem>
-          <MenuItem>
-            <MenuItemLink as={Link} to="/Reading">
-              Lectura
-            </MenuItemLink>
-          </MenuItem>
         </Menu>
       </Wrapper>
     </Container>
