@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
+import Historial from "../pages/HistorialPage/Historial";
 import PickACard from "../pages/PickACard";
 import ReadingPage from "../pages/ReadingPage/ReadingPage";
 
@@ -10,6 +11,7 @@ function Router() {
         <Route path="/" element={<App />} />
         <Route path="/pick-a-card" element={<PickACard />} />
         <Route path="/Reading" element={<ReadingPage />} />
+
       </Routes>
     </BrowserRouter>
   );
