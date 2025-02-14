@@ -11,7 +11,6 @@ const IconButtonStyled = styled.button`
   }
 
   .icon-image {
-    //pointer-events: none;
   }
 `;
 
