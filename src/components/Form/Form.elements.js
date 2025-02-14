@@ -5,10 +5,10 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 300px;
-  padding: 20px;
+  padding: 0.4em;
   border-radius: 5px;
-  margin: 10px;
-  bottom:4em;
+  margin: 0.1em;
+  bottom: 4em;
   
   p.buttonText{
     font-size: 1.4rem;

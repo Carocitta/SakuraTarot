@@ -6,18 +6,23 @@ const AppPageStyled = styled.main`
   align-items: center;
 
   .kero-logo {
-    width: 50%;
+    max-width: 40%;
     height: auto;
-    padding: 10px;
+    padding: 5px;
   }
+
   h1 {
     color: var(--brown);
     font-size: 3rem;
-    padding: 20px;
+    padding: 10px;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
   }
 
    p {
     font-size: 1.9rem;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
   }
    
 `;
