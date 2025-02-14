@@ -10,7 +10,7 @@ export const Container = styled.div`
   height: 5rem;
   background-color: var(--brown);
 
-  @media (max-width: 767px) and (orientation: landscape) {
+  @media (max-width: 1024px) and (orientation: landscape) {
     height: 3rem;
   }
 `;
@@ -22,8 +22,9 @@ export const Wrapper = styled.div`
   padding: 0 20px;
   color: var(--yellow);
 
-  @media (max-width: 767px) and (orientation: landscape) {
+  @media (max-width: 1024px) and (orientation: landscape) {
     height: 100%; 
+    padding: 1rem;
   }
 `;
 
@@ -35,7 +36,7 @@ export const LogoContainer = styled.div`
 
   .headerTitle {
   font-size: 2rem;
-  @media (max-width: 767px) and (orientation: landscape) {
+  @media (max-width: 1024px) and (orientation: landscape) {
   font-size: 1.5rem;
     }
   }
@@ -45,12 +46,12 @@ export const LogoContainer = styled.div`
     width: 80px;
     height: auto;
 
-    @media (max-width: 767px) and (orientation: landscape) {
+    @media (max-width: 1024px) and (orientation: landscape) {
       width: 50px;
     }
   }
 
-  @media (max-width: 767px) and (orientation: landscape) {
+  @media (max-width: 1024px) and (orientation: landscape) {
     height: 100%; 
   }
 `;
