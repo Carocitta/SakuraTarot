@@ -34,8 +34,8 @@ export const LogoContainer = styled.div`
   font-weight: 700;
 
   .headerTitle {
-font-size: 2rem;
-@media (max-width: 767px) and (orientation: landscape) {
+  font-size: 2rem;
+  @media (max-width: 767px) and (orientation: landscape) {
   font-size: 1.5rem;
     }
   }

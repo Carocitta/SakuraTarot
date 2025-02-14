@@ -5,17 +5,22 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 300px;
-  padding: 20px;
+  padding: 0.4em;
   border-radius: 5px;
-  margin: 10px;
+  margin: 0.1em;
   bottom: 4em;
-
-  p.butText {
+  
+  p.buttonText{
     font-size: 1.4rem;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     justify-content: center;
+  }
+    
+  p.errorText{
+    font-size: 0.8rem;
+    color: red;
   }
 `;
 
