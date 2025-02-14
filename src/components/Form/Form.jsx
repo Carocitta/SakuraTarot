@@ -8,7 +8,7 @@ const Form = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate(/*/pick-a-card*/);
+        navigate("/pick-a-card");
     };
   
     return (
@@ -21,8 +21,7 @@ const Form = () => {
                     pattern="[A-Za-z]+" 
                     title="Por favor, ingresa solo letras (sin números ni espacios)."
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required 
+                    onChange={(e) => setName(e.target.value)} 
                     onInvalid={(e) => {
                         if (!e.target.value) {
                             e.target.setCustomValidity("Este campo es obligatorio.");

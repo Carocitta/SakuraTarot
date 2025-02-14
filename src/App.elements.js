@@ -11,7 +11,7 @@ const AppPageStyled = styled.main`
     padding: 10px;
   }
   h1 {
-    color: #795743;
+    color: var(--brown);
     font-size: 3rem;
     padding: 20px;
   }
