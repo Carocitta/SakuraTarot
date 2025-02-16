@@ -58,7 +58,8 @@ const ReadingPage = () => {
             <img
               src={cards.past.sakuraCard}
               alt={cards.past.spanishName}
-              width="150"
+              /* width="150" */
+              className="card-image"
             />
             <div className="time-frame-container">
               <p className="time-frame">Pasado</p>
@@ -73,7 +74,8 @@ const ReadingPage = () => {
             <img
               src={cards.present.sakuraCard}
               alt={cards.present.spanishName}
-              width="150"
+              /* width="150" */
+              className="card-image"
             />
             <div className="time-frame-container">
               <p className="time-frame">Presente</p>
@@ -88,7 +90,8 @@ const ReadingPage = () => {
             <img
               src={cards.future.sakuraCard}
               alt={cards.future.spanishName}
-              width="150"
+              /* width="150" */
+              className="card-image"
             />
             <div className="time-frame-container">
               <p className="time-frame">Futuro</p>

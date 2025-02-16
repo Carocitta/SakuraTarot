@@ -6,42 +6,85 @@ const ReadinPageStyled = styled.section`
   .cards-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 10%;
+    padding: 0.5rem;
+    gap: 8rem;
+    margin-top: 8%;
     width: 90%;
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      width: 80%;
+      gap: 10%;
+    }
   }
 
   .card-container {
     display: flex;
     align-items: center;
-    width: fit-content;
+    width: auto;
     height: fit-content;
+    max-width: 15rem;
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      max-height: 60vh;
+    }
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
+    
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      height: 20rem;
+      width: 10rem;
+      padding: 1rem;
+      max-width: fit-content;
   }
 
   .time-frame {
     color: #9083e3;
     font-size: 2rem;
     font-weight: bold;
+    
+    @media (max-width: 1024px) and (orientation: landscape) {
+      font-size: 1.5rem;
+    }
+
+
   }
 
   .time-frame-container {
     display: flex;
     align-items: flex-start;
-    margin-left: 10px;
+    padding: 1rem;
     max-width: 210px;
     max-height: 351px;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      font-size: 1.2rem;
+    }
   }
 
   .card-name {
     color: #795743;
     font-size: 1.5rem;
     font-weight: bold;
+
+    @media (max-width: 1024px) and (orientation: landscape) { 
+      font-size: 1.2rem;
+    }
   }
+
   .card-meaning {
     font-size: 1.5rem;
     word-wrap: normal;
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      justify-content: center;  
+      font-size: 1.2rem;
+    }
   }
 
   .button-quote-container {
@@ -52,8 +95,15 @@ const ReadinPageStyled = styled.section`
     flex-direction: column;
     justify-content: center;
   }
+
   .end-quote {
     font-size: 2rem;
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      height: 50%;
+      justify-content: center;  
+      font-size: 1.5rem;
+    }
   }
 
   .save-reading-btn {
