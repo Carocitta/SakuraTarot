@@ -3,21 +3,13 @@ import styled from "styled-components";
 const ReadinPageStyled = styled.section`
   justify-items: stretch;
 
-   @media (max-width: 1024px) and (orientation: landscape) {
-      justify-items: center;
-    }
-
-    @media (max-width: 768px) {
-      justify-items: center;
-    }
-
   .cards-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0.5rem;
     gap: 8rem;
-    margin-top: 8%;
+    margin-top: 5%;
     width: 90%;
 
     @media (max-width: 1024px) and (orientation: landscape) {
@@ -44,7 +36,8 @@ const ReadinPageStyled = styled.section`
     }
 
     @media (max-width: 768px) {
-      max-width: 12rem;
+      max-width: 10rem;
+      height: auto;
     }
   }
 
@@ -62,7 +55,9 @@ const ReadinPageStyled = styled.section`
     }
 
     @media (max-width: 768px) {
-      transform: translateY(-10px);
+      transform: translateY(-15px);
+      max-width: 10rem;
+      height: auto;
     }
   }
 
@@ -85,6 +80,8 @@ const ReadinPageStyled = styled.section`
     color: var(--purple);
     font-size: 2rem;
     font-weight: bold;
+    margin: inherit;
+    padding-bottom: 0.3rem;
     
     @media (max-width: 1024px) and (orientation: landscape) {
       font-size: 1.5rem;
@@ -98,7 +95,7 @@ const ReadinPageStyled = styled.section`
   .time-frame-container {
     display: flex;
     align-items: flex-start;
-    padding: 1rem;
+    padding-left: 0.9rem;
     max-width: 210px;
     max-height: 351px;
     flex-direction: column;
@@ -118,13 +115,15 @@ const ReadinPageStyled = styled.section`
     color: var(--brown);
     font-size: 1.5rem;
     font-weight: bold;
+  
 
     @media (max-width: 1024px) and (orientation: landscape) { 
       font-size: 1.2rem;
     }
 
     @media (max-width: 768px) {
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin-bottom: 0.1rem;
     }
   }
 
@@ -138,19 +137,19 @@ const ReadinPageStyled = styled.section`
     }
 
     @media (max-width: 768px) {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 
   .button-quote-container {
-    bottom: 10%;
+    position: relative;
+    bottom: 7%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     @media (max-width: 768px) {
       bottom: 5%;
-      text-align: center;
       width: 100%;
     }
   }
@@ -158,6 +157,9 @@ const ReadinPageStyled = styled.section`
   .end-quote {
     font-size: 2rem;
     align-self: center;
+    margin: 0;
+    padding: 0.1rem;
+    text-align: center;
 
     @media (max-width: 1024px) and (orientation: landscape) {
       height: 50%; 
@@ -165,14 +167,18 @@ const ReadinPageStyled = styled.section`
     }
 
     @media (max-width: 768px) {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   }
 
   .hearts {
     display: flex;
     align-self: center;
-    width: 60%;
+    width: 70%;
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      width: 60%;
+    }
 
     @media (max-width: 768px) {
       width: 50%;
@@ -183,13 +189,17 @@ const ReadinPageStyled = styled.section`
     border: none;
     background-color: inherit;
     display: inline-block;
-    color: #9083e3;
+    color: var(--purple);
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: underline;
 
+    @media (max-width: 1024px) and (orientation: landscape) {
+      font-size: 1.2rem;
+    }
+
     @media (max-width: 768px) {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   }
 `;

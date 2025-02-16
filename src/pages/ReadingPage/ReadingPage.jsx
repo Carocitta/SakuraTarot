@@ -32,6 +32,15 @@ const ReadingPage = () => {
     if (future) fetchedCard(future, "future");
   }, [past, present, future]);
 
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const saveReading = () => {
     const savedReading = JSON.parse(localStorage.getItem("favorite")) || [];
     const newReading = {
@@ -105,7 +114,7 @@ const ReadingPage = () => {
       </div>
       <div className="button-quote-container">
         <p className="end-quote">
-          Se termina el juicio. Yo, el juez Yue, le declaro su destino.
+          Se termina el juicio. Yo, el juez Yue, {!isSmallScreen && <br />}le declaro su destino.
         </p>
         <img className="hearts" src={heartsDecoration} alt="decoration hearts" />
         <button className="save-reading-btn" onClick={saveReading}>
