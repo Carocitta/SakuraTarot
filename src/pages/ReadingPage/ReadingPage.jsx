@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ReadinPageStyled from "./ReadingPageStyled";
 import Header from "../../components/Header/Header";
 import decoration from "../../assets/images/decorative_underTitle.png";
+import heartsDecoration from "../../assets/images/decorative_underCard.png";
 
 const ReadingPage = () => {
   const location = useLocation();
@@ -104,8 +105,9 @@ const ReadingPage = () => {
       </div>
       <div className="button-quote-container">
         <p className="end-quote">
-          Se Termina el juicio. Yo el juez Yue, le declaro su destino
+          Se termina el juicio. Yo, el juez Yue, le declaro su destino.
         </p>
+        <img className="hearts" src={heartsDecoration} alt="decoration hearts" />
         <button className="save-reading-btn" onClick={saveReading}>
           Guardar mi destino
         </button>

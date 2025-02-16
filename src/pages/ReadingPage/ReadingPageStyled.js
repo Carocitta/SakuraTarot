@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 const ReadinPageStyled = styled.section`
   justify-items: stretch;
+
    @media (max-width: 1024px) and (orientation: landscape) {
+      justify-items: center;
+    }
+
+    @media (max-width: 768px) {
       justify-items: center;
     }
 
@@ -16,9 +21,14 @@ const ReadinPageStyled = styled.section`
     width: 90%;
 
     @media (max-width: 1024px) and (orientation: landscape) {
-      display: flex;
-      flex-direction: row;
       gap: 10%;
+    }
+
+    @media (max-width: 768px) {
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+      margin-top: 5%;
     }
   }
 
@@ -31,9 +41,13 @@ const ReadinPageStyled = styled.section`
 
     @media (max-width: 1024px) and (orientation: landscape) {
       max-height: 60vh;
+    }
 
+    @media (max-width: 768px) {
+      max-width: 12rem;
     }
   }
+
   .card-container-middle {
     display: flex;
     align-items: center;
@@ -45,7 +59,10 @@ const ReadinPageStyled = styled.section`
     @media (max-width: 1024px) and (orientation: landscape) {
       max-height: 60vh;
       transform: translateY(-25px);
+    }
 
+    @media (max-width: 768px) {
+      transform: translateY(-10px);
     }
   }
 
@@ -54,15 +71,18 @@ const ReadinPageStyled = styled.section`
     align-items: center;
 
     @media (max-width: 1024px) and (orientation: landscape) {
-      height: 20rem;
-      width: 10rem;
-      padding: 1rem;
-      max-width: fit-content;
+      height: 17rem;
+      width: auto;
+      padding: 0.1rem;
+    }
+
+    @media (max-width: 768px) {
+      height: 14rem;
     }
   }
 
   .time-frame {
-    color: #9083e3;
+    color: var(--purple);
     font-size: 2rem;
     font-weight: bold;
     
@@ -70,7 +90,9 @@ const ReadinPageStyled = styled.section`
       font-size: 1.5rem;
     }
 
-
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
   }
 
   .time-frame-container {
@@ -83,17 +105,26 @@ const ReadinPageStyled = styled.section`
     justify-content: center;
 
     @media (max-width: 1024px) and (orientation: landscape) {
-      font-size: 1.2rem;
+        
+    }
+
+    @media (max-width: 768px) {
+        max-width: 180px;
+        padding: 0.5rem;
     }
   }
 
   .card-name {
-    color: #795743;
+    color: var(--brown);
     font-size: 1.5rem;
     font-weight: bold;
 
     @media (max-width: 1024px) and (orientation: landscape) { 
       font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
     }
   }
 
@@ -105,24 +136,46 @@ const ReadinPageStyled = styled.section`
       justify-content: center;  
       font-size: 1.2rem;
     }
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   .button-quote-container {
-    position: absolute;
     bottom: 10%;
-    left: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      bottom: 5%;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   .end-quote {
     font-size: 2rem;
+    align-self: center;
 
     @media (max-width: 1024px) and (orientation: landscape) {
-      height: 50%;
-      justify-content: center;  
+      height: 50%; 
       font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .hearts {
+    display: flex;
+    align-self: center;
+    width: 60%;
+
+    @media (max-width: 768px) {
+      width: 50%;
     }
   }
 
@@ -134,6 +187,10 @@ const ReadinPageStyled = styled.section`
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: underline;
+
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
   }
 `;
 export default ReadinPageStyled;
