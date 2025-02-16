@@ -1,18 +1,23 @@
 import styled from "styled-components";
 
 const ReadinPageStyled = styled.section`
-  justify-items: center;
+  justify-items: stretch;
+   @media (max-width: 1024px) and (orientation: landscape) {
+      justify-items: center;
+    }
 
   .cards-container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     padding: 0.5rem;
     gap: 8rem;
     margin-top: 8%;
     width: 90%;
 
     @media (max-width: 1024px) and (orientation: landscape) {
-      width: 80%;
+      display: flex;
+      flex-direction: row;
       gap: 10%;
     }
   }
@@ -26,19 +31,34 @@ const ReadinPageStyled = styled.section`
 
     @media (max-width: 1024px) and (orientation: landscape) {
       max-height: 60vh;
+
+    }
+  }
+  .card-container-middle {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+    max-width: 15rem;
+    transform: translateY(-50px);
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      max-height: 60vh;
+      transform: translateY(-25px);
+
     }
   }
 
   .card-image {
     display: flex;
     align-items: center;
-    
 
     @media (max-width: 1024px) and (orientation: landscape) {
       height: 20rem;
       width: 10rem;
       padding: 1rem;
       max-width: fit-content;
+    }
   }
 
   .time-frame {

@@ -70,7 +70,7 @@ const ReadingPage = () => {
           </div>
         )}
         {cards.present && (
-          <div className="card-container">
+          <div className="card-container-middle">
             <img
               src={cards.present.sakuraCard}
               alt={cards.present.spanishName}
