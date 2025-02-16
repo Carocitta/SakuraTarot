@@ -15,14 +15,13 @@ const GlobalStyle = createGlobalStyle`
 --purple: #9083e3;
 --lightpurple: #d7b9fb;
 --black: #08090a;
---white: #fff;
+--white: #ffffff;
 
 }
 
  body {
   margin: 0;
   background-color: var(--yellow);
-  
  }
 
  ul {

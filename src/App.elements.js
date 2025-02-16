@@ -13,25 +13,26 @@ const AppPageStyled = styled.main`
     flex-direction: column;
     align-items: center;
     width: 90%;
-    max-width: 1200px;
+    max-width: auto;
   }
 
   .text-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    max-width: auto;
   }
 
-  .image-container {
+  .title-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
   }
 
   .kero-logo {
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
   }
 

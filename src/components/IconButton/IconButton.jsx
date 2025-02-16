@@ -1,4 +1,4 @@
-import IconButtonStyled from "./IconButtonStyled";
+import IconButtonStyled from "./IconButton.elements";
 
 function IconButton({ icon, actionOnclick }) {
   return (
