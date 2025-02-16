@@ -68,7 +68,7 @@ const ReadinPageStyled = styled.section`
   }
 
   .card-name {
-    color: var(--brown);
+    color: #795743;
     font-size: 1.5rem;
     font-weight: bold;
 
@@ -110,7 +110,7 @@ const ReadinPageStyled = styled.section`
     border: none;
     background-color: inherit;
     display: inline-block;
-    color: var(--lightpurple);
+    color: #9083e3;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: underline;
