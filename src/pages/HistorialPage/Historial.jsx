@@ -5,11 +5,10 @@ import deleteIcon from "../../assets/images/delete-icon.png";
 import modifyIcon from "../../assets/images/modify-icon.png";
 import IconButton from "../../components/IconButton/IconButton";
 
-
 function Historial() {
   const [savedReadings, setSavedReadings] = useState([]);
-  const [editingId, setEditingId] = useState(null); 
-  const [newUserName, setNewUserName] = useState(""); 
+  const [editingId, setEditingId] = useState(null);
+  const [newUserName, setNewUserName] = useState("");
 
   useEffect(() => {
     fetchSavedReadings();
@@ -80,8 +79,6 @@ function Historial() {
   return (
     <>
       <Header />
-      <button onClick={deleteAllReadings}>Eliminar todas las lecturas</button>
-
       <ul>
         {savedReadings.map((reading) => (
           <li key={reading.id}>
@@ -112,6 +109,9 @@ function Historial() {
                 />
                 <p>Fecha: {new Date(reading.date).toUTCString()}</p>
                 <p>{reading.username || "Sin nombre"}</p>
+                <button onClick={deleteAllReadings}>
+                  Eliminar todas las lecturas
+                </button>
               </>
             )}
           </li>
