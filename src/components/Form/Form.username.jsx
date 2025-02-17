@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const PickACard = () => {
+const userNameSaved = () => {
     const [userName, setUserName] = useState("");
 
     useEffect(() => {
@@ -10,5 +10,6 @@ const PickACard = () => {
         }
     }, []);
 }
+export default userNameSaved
 
-//usar {userName} para llamar el nombre
+//usar {userName} para llamar al nombre de usuario guardado!
