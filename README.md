@@ -8,7 +8,7 @@
 
    🌌 Elige una carta que represente tu pasado.
 
-   🌟 Elige una carta que represente tue tu presente.
+   🌟 Elige una carta que represente tu presente.
 
    🌈 Elige una carta que represente tu futuro.
 
