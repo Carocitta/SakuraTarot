@@ -1,4 +1,4 @@
-// src/hooks/useOrientation.js
+
 import { useState, useEffect } from 'react';
 
 export const UseOrientation = () => {
@@ -11,14 +11,14 @@ export const UseOrientation = () => {
       setIsPortrait(portrait);
     };
 
-    // Verificar al inicio
+    
     checkOrientation();
 
-    // Escuchar cambios de orientación
+    
     window.addEventListener('resize', checkOrientation);
     window.addEventListener('orientationchange', checkOrientation);
 
-    // Limpiar eventos cuando el componente se desmonte
+    
     return () => {
       window.removeEventListener('resize', checkOrientation);
       window.removeEventListener('orientationchange', checkOrientation);

@@ -1,13 +1,15 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { FormContainer, Input, SubmitButton } from "./Form.elements";
+import { UseOrientation } from "../../hooks/UseOrientation";
+import { isEditableInputOrTextArea } from "@testing-library/user-event/dist/cjs/utils/index.js";
 
 const Form = () => {
     const [name, setName] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const inputRef = useRef(null);
-    
+    const setIsPortrait = UseOrientation();
     const validateName = (name) => {
         if (!name.trim()) {
             return "Este campo es obligatorio.";
@@ -42,11 +44,13 @@ const Form = () => {
                     ref={inputRef}
                     aria-describedby="name-error"
                     aria-invalid={!!error}
+                    disabled={setIsPortrait} 
                 />
                 {error && <p id="name-error" className="errorText" role="alert" aria-live="assertive">
                     {error}
                 </p>}
-                <SubmitButton type="submit">
+                <SubmitButton type="submit"
+                disabled={setIsPortrait} >
                     <p className="buttonText">Descubre tu fortuna</p>
                 </SubmitButton>
             </form>

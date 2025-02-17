@@ -2,9 +2,9 @@ import { Overlay, Message } from "./Warning.styled";
 import { UseOrientation } from "../../hooks/UseOrientation";
 
 export const OrientationWarning = () => {
-  const isPortrait = UseOrientation(); // ✅ Llamamos al hook correctamente
+  const isPortrait = UseOrientation(); 
 
-  if (!isPortrait) return null; // Si NO es modo retrato, no mostramos nada
+  if (!isPortrait) return null; 
 
   return (
     <Overlay>
