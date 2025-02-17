@@ -28,7 +28,7 @@ const ReadinPageStyled = styled.section`
     display: flex;
     align-items: center;
     width: auto;
-    height: fit-content;
+/*     height: fit-content; */
     max-width: 15rem;
 
     @media (max-width: 1024px) and (orientation: landscape) {
@@ -45,7 +45,7 @@ const ReadinPageStyled = styled.section`
     display: flex;
     align-items: center;
     width: auto;
-    height: fit-content;
+    /* height: fit-content; */
     max-width: 15rem;
     transform: translateY(-50px);
 
@@ -133,7 +133,7 @@ const ReadinPageStyled = styled.section`
 
     @media (max-width: 1024px) and (orientation: landscape) {
       justify-content: center;  
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     @media (max-width: 768px) {
