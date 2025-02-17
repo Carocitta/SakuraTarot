@@ -1,8 +1,8 @@
 import { Overlay, Message } from "./Warning.styled";
-import { UseOrientation } from "../../hooks/UseOrientation";
+import { useOrientation } from "../../hooks/useOrientation";
 
 export const OrientationWarning = () => {
-  const isPortrait = UseOrientation(); 
+  const isPortrait = useOrientation(); 
 
   if (!isPortrait) return null; 
 
