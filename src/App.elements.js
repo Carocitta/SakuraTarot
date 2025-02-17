@@ -30,14 +30,6 @@ const AppPageStyled = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @media screen and (max-width: 1024px) and (orientation: landscape) {
-      
-    }
-
-    @media screen and (max-width: 768px) and (orientation: landscape) {
-    
-    }
   }
 
   .title-container {
