@@ -107,15 +107,13 @@ function Historial() {
                     startEditing(reading.id, reading.username)
                   }
                 />
-                <p>Fecha: {new Date(reading.date).toUTCString()}</p>
+                {new Date(reading.date).toUTCString()}
                 <p>{reading.username || "Sin nombre"}</p>
-                <button onClick={deleteAllReadings}>
-                  Eliminar todas las lecturas
-                </button>
               </>
             )}
           </li>
         ))}
+        <button onClick={deleteAllReadings}>Eliminar todas las lecturas</button>
       </ul>
     </>
   );

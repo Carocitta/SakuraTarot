@@ -1,24 +1,3 @@
 {
-  "savedCards": [
-    {
-      "id": "dd57",
-      "date": "2025-02-17T21:57:37.861Z",
-      "username": "lolo",
-      "past": {
-        "name": "Viento",
-        "image": "https://i.ibb.co/k5HVTP7/Viento-Sakura.jpg",
-        "meaning": "Simboliza el intelecto, la sabiduría, la meteorología muestra información valiosa."
-      },
-      "present": {
-        "name": "Borrar",
-        "image": "https://i.ibb.co/xGT9X0p/Borrar-Sakura.jpg",
-        "meaning": "Representa la desaparición, el olvido."
-      },
-      "future": {
-        "name": "Flote",
-        "image": "https://i.ibb.co/0VZ0RGV/Flote-Sakura.jpg",
-        "meaning": " Simboliza la capacidad de tener una visión general sobre algo, o de evadirse de un problema."
-      }
-    }
-  ]
+  "savedCards": []
 }
