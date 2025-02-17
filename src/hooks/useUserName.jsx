@@ -4,7 +4,7 @@ const useUserName = () => {
     const [userName, setUserName] = useState("");
 
     useEffect(() => {
-        const storedName = locaalStorage.getItem("userName");
+        const storedName = localStorage.getItem("userName");
         if (storedName) {
             setUserName(storedName);
         }
@@ -25,3 +25,23 @@ const useUserName = () => {
 };
 
 export default useUserName;
+
+/* import useUserName from "../../hooks/useUserName"; // Import the hook
+
+const History = () => {
+    const { userName, clearUserName } = useUserName(); // Use the hook
+
+    return (
+        <div>
+            <h2>Historial de Usuario</h2>
+            {userName ? (
+                <>
+                    <p>Bienvenido de nuevo, <strong>{userName}</strong>!</p>
+                    <button onClick={clearUserName}>Borrar Nombre</button>
+                </>
+            ) : (
+                <p>No hay un usuario guardado.</p>
+            )}
+        </div>
+    );
+} */
