@@ -1,3 +1,42 @@
 {
-  "savedCards": []
+  "savedCards": [
+    {
+      "id": "06f5",
+      "date": "2025-02-17T16:05:06.702Z",
+      "past": {
+        "name": "Escudo",
+        "image": "https://i.ibb.co/8KHfgds/Escudo-Sakura.jpg",
+        "meaning": "Simboliza la protección, tanto personal como de algo que nosotros consideremos muy valioso."
+      },
+      "present": {
+        "name": "Equilibrio",
+        "image": "https://i.ibb.co/vJ319Jt/Equilibrio-Sakura.jpg",
+        "meaning": "Simboliza la verdad, la justicia, el balance del bien y el mal, el equilibrio."
+      },
+      "future": {
+        "name": "Tierra",
+        "image": "https://i.ibb.co/1nd4cL8/Tierra-Sakura.jpg",
+        "meaning": "Simboliza la solidez, la sujeción y la vida."
+      }
+    },
+    {
+      "id": "6d5e",
+      "date": "2025-02-17T16:05:17.487Z",
+      "past": {
+        "name": "Nube",
+        "image": "https://i.ibb.co/wh7w3kG/Nube-Sakura.jpg",
+        "meaning": "Esta carta simboliza incertidumbre."
+      },
+      "present": {
+        "name": "Burbujas",
+        "image": "https://i.ibb.co/8sQ5Yrg/Burbujas-Sakura.jpg",
+        "meaning": " Simboliza la multitud, la unión, el camuflaje."
+      },
+      "future": {
+        "name": "Escudo",
+        "image": "https://i.ibb.co/8KHfgds/Escudo-Sakura.jpg",
+        "meaning": "Simboliza la protección, tanto personal como de algo que nosotros consideremos muy valioso."
+      }
+    }
+  ]
 }

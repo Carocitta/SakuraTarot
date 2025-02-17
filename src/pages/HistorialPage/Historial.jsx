@@ -63,7 +63,6 @@ function Historial() {
             />
             <IconButton icon={modifyIcon} />
             {new Date(reading.date).toUTCString()}
-
             {userNames.length > 0 && (
               <ul>
                 {userNames.map((name, index) => (
