@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { FormContainer, Input, SubmitButton } from "./Form.elements";
-import { UseOrientation } from "../../hooks/UseOrientation";
+import { useOrientation } from "../../hooks/useOrientation";
 import { isEditableInputOrTextArea } from "@testing-library/user-event/dist/cjs/utils/index.js";
 
 const Form = () => {
@@ -9,7 +9,7 @@ const Form = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const inputRef = useRef(null);
-    const setIsPortrait = UseOrientation();
+    const setIsPortrait = useOrientation();
     const validateName = (name) => {
         if (!name.trim()) {
             return "Este campo es obligatorio.";
