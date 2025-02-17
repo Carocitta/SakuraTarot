@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 export const UseOrientation = () => {
   const [isPortrait, setIsPortrait] = useState(false);
+  
 
   useEffect(() => {
     const checkOrientation = () => {
