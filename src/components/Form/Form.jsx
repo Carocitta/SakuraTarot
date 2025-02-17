@@ -26,7 +26,8 @@ const Form = () => {
             inputRef.current.focus();
             return;
         }
-        setError(""); 
+        setError("");
+        localStorage.setItem("userName", name);
         navigate("/pick-a-card");
     };
 
