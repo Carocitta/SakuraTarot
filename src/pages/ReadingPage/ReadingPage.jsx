@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ReadinPageStyled from "./ReadingPageStyled";
 import Header from "../../components/Header/Header";
 import decoration from "../../assets/images/decorative_underTitle.png";
+import heartsDecoration from "../../assets/images/decorative_underCard.png";
 
 function ReadingPage() {
   const location = useLocation();
@@ -65,6 +66,15 @@ function ReadingPage() {
     }
   };
 
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+      const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+      window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <ReadinPageStyled>
       <Header />
@@ -74,7 +84,8 @@ function ReadingPage() {
             <img
               src={cards.past.sakuraCard}
               alt={cards.past.spanishName}
-              width="150"
+              /* width="150" */
+              className="card-image"
             />
             <div className="time-frame-container">
               <p className="time-frame">Pasado</p>
@@ -85,11 +96,12 @@ function ReadingPage() {
           </div>
         )}
         {cards.present && (
-          <div className="card-container">
+          <div className="card-container-middle">
             <img
               src={cards.present.sakuraCard}
               alt={cards.present.spanishName}
-              width="150"
+              /* width="150" */
+              className="card-image"
             />
             <div className="time-frame-container">
               <p className="time-frame">Presente</p>
@@ -104,7 +116,8 @@ function ReadingPage() {
             <img
               src={cards.future.sakuraCard}
               alt={cards.future.spanishName}
-              width="150"
+              /* width="150" */
+              className="card-image"
             />
             <div className="time-frame-container">
               <p className="time-frame">Futuro</p>
@@ -117,8 +130,9 @@ function ReadingPage() {
       </div>
       <div className="button-quote-container">
         <p className="end-quote">
-          Se Termina el juicio. Yo el juez Yue, le declaro su destino
+          Se termina el juicio. Yo, el juez Yue, {!isSmallScreen && <br />}le declaro su destino.
         </p>
+        <img className="hearts" src={heartsDecoration} alt="decoration hearts" />
         <button className="save-reading-btn" onClick={saveReading}>
           Guardar mi destino
         </button>
