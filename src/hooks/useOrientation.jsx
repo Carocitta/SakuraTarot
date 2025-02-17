@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 
-export const UseOrientation = () => {
+export const useOrientation = () => {
   const [isPortrait, setIsPortrait] = useState(false);
   
 
