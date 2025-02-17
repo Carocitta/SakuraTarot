@@ -42,7 +42,6 @@ export const Input = styled.input`
 
   @media screen and (max-width: 1024px) and (orientation: landscape) {
     height: 3.4rem;
-    width: 120%;
   }
   
   @media screen and (max-width: 768px) and (orientation: landscape) {
@@ -68,7 +67,6 @@ export const SubmitButton = styled.button`
 
   @media screen and (max-width: 1024px) and (orientation: landscape) {
     height: 3.4rem;
-    width: 120%;
   }
 
   @media screen and (max-width: 768px) and (orientation: landscape) {

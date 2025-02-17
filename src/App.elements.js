@@ -19,11 +19,6 @@ const AppPageStyled = styled.main`
       flex-direction: row;
       align-items: center;
     }
-
-    @media screen and (max-width: 768px) and (orientation: landscape) {
-      flex-direction: row;
-      align-items: center;
-    }
   }
 
   .text-container {

@@ -74,9 +74,9 @@ export const MenuItem = styled.li`
 export const MenuItemLink = styled.a`
   ${sharedStyles}
   justify-content: center;
+  align-self: center;
   height: 100%;
-  /* padding: 0.5rem 2.5rem; */
-  padding-right: 5rem;
+  padding: 0.5rem 2.5rem;
   font-size: 1.4rem;
   font-weight: 300;
   cursor: pointer;
@@ -92,11 +92,9 @@ export const MenuItemLink = styled.a`
 
   @media (max-width: 1024px) and (orientation: landscape) {
     font-size: 1.2rem;
-    padding-right: 4.5rem;
   }
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
-    padding-right: 4rem;
   }
 `;
