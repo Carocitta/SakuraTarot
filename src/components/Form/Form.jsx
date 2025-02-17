@@ -42,7 +42,7 @@ const Form = () => {
                 <Input 
                     type="text"
                     maxLength={10}
-                    value={userName}
+                    value={nameame}
                     onChange={(e) => setName(e.target.value)}
                     ref={inputRef}
                     aria-describedby="name-error"
