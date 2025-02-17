@@ -1,12 +1,12 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router";
-import { FormContainer, Input, SubmitButton } from "./Form.elements";
+import { FormContainer, Input, SubmitButton } from "./Form.styled";
 import { useOrientation } from "../../hooks/useOrientation";
 import useUserName from "../../hooks/useUserName";
 import { isEditableInputOrTextArea } from "@testing-library/user-event/dist/cjs/utils/index.js";
 
 const Form = () => {
-    const { userName, setUserName  } = useUserName("");
+    const { userName, setUserName } = useUserName("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const inputRef = useRef(null);
@@ -40,7 +40,7 @@ const Form = () => {
                     type="text"
                     maxLength={10}
                     value={userName}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setUserName(e.target.value)}
                     ref={inputRef}
                     aria-describedby="name-error"
                     aria-invalid={!!error}

@@ -5,7 +5,7 @@ import {
   MenuItem,
   MenuItemLink,
   Wrapper,
-} from "./Header.elements";
+} from "./Header.styled";
 import logo from "../../assets/images/kero.png";
 import { Link } from "react-router-dom";
 

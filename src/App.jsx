@@ -1,4 +1,4 @@
-import AppPageStyled from "./App.elements";
+import AppPageStyled from "./App.styled";
 import { OrientationWarning } from "./components/Warning/Warning";
 import image from "../src/assets/images/kero_logo.png";
 import Form from "./components/Form/Form";

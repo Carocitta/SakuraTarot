@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { StyledDeckOfCards } from "./DeckOfCards.elements";
+import { StyledDeckOfCards } from "./DeckOfCards.styled";
 import Card from "../Card/Card";
 import Api from "../../api/Api";
 
