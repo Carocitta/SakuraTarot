@@ -10,18 +10,8 @@ function PickACard() {
   return (
     <>
       <Header />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          height: "100%",
-
-        }}
-      >
+      <div className="cardsPage">
         <DeckOfCards changeStep={changeStep} />
-
-
 
         {step === "past" && (
           <Title>
