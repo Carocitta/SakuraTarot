@@ -5,16 +5,19 @@ import ReadinPageStyled from "./ReadingPageStyled";
 import Header from "../../components/Header/Header";
 import decoration from "../../assets/images/decorative_underTitle.png";
 import heartsDecoration from "../../assets/images/decorative_underCard.png";
+import useUserName from "../../hooks/useUserName";
 
 function ReadingPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const { past, present, future } = location.state || {};
+  const { userName } = useUserName();
   const [cards, setCards] = useState({
     past: null,
     present: null,
     future: null,
   });
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const fetchedCard = async (id, type) => {
@@ -33,6 +36,12 @@ function ReadingPage() {
     if (future) fetchedCard(future, "future");
   }, [past, present, future]);
 
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const saveReading = async () => {
     if (!cards.past || !cards.present || !cards.future) {
       return;
@@ -40,6 +49,7 @@ function ReadingPage() {
 
     const readingData = {
       date: new Date().toISOString(),
+      username: userName || "Anónimo",
       past: {
         name: cards.past.spanishName,
         image: cards.past.sakuraCard,
@@ -58,22 +68,12 @@ function ReadingPage() {
     };
 
     try {
-      axios.post("http://localhost:3000/savedCards", readingData);
+      await axios.post("http://localhost:3000/savedCards", readingData);
       navigate("/Historial");
-      alert;
     } catch (error) {
       console.error("Error saving the reading:", error);
     }
   };
-
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <ReadinPageStyled>
@@ -84,12 +84,11 @@ function ReadingPage() {
             <img
               src={cards.past.sakuraCard}
               alt={cards.past.spanishName}
-              /* width="150" */
               className="card-image"
             />
             <div className="time-frame-container">
               <p className="time-frame">Pasado</p>
-              <img src={decoration} />
+              <img src={decoration} alt="decoration" />
               <p className="card-name">{cards.past.spanishName}</p>
               <p className="card-meaning">{cards.past.meaning}</p>
             </div>
@@ -100,12 +99,11 @@ function ReadingPage() {
             <img
               src={cards.present.sakuraCard}
               alt={cards.present.spanishName}
-              /* width="150" */
               className="card-image"
             />
             <div className="time-frame-container">
               <p className="time-frame">Presente</p>
-              <img src={decoration} />
+              <img src={decoration} alt="decoration" />
               <p className="card-name">{cards.present.spanishName}</p>
               <p className="card-meaning">{cards.present.meaning}</p>
             </div>
@@ -116,12 +114,11 @@ function ReadingPage() {
             <img
               src={cards.future.sakuraCard}
               alt={cards.future.spanishName}
-              /* width="150" */
               className="card-image"
             />
             <div className="time-frame-container">
               <p className="time-frame">Futuro</p>
-              <img src={decoration} />
+              <img src={decoration} alt="decoration" />
               <p className="card-name">{cards.future.spanishName}</p>
               <p className="card-meaning">{cards.future.meaning}</p>
             </div>
@@ -130,7 +127,7 @@ function ReadingPage() {
       </div>
       <div className="button-quote-container">
         <p className="end-quote">
-          Se termina el juicio. Yo, el juez Yue, {!isSmallScreen && <br />}le
+          Se termina el juicio. Yo, el juez Yue, {!isSmallScreen && <br />} le
           declaro su destino.
         </p>
         <img

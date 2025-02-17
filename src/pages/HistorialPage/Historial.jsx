@@ -4,35 +4,36 @@ import axios from "axios";
 import deleteIcon from "../../assets/images/delete-icon.png";
 import modifyIcon from "../../assets/images/modify-icon.png";
 import IconButton from "../../components/IconButton/IconButton";
-import useUserName from "../../hooks/useUserName";
+
 
 function Historial() {
-  const [savedReadings, setsavedReadings] = useState([]);
+  const [savedReadings, setSavedReadings] = useState([]);
+  const [editingId, setEditingId] = useState(null); 
+  const [newUserName, setNewUserName] = useState(""); 
 
   useEffect(() => {
-    const fetchSavedReadings = async () => {
-      try {
-        const response = await axios.get("http://localhost:3000/savedCards");
-        setsavedReadings(response.data);
-      } catch (error) {
-        console.error("Error, no tiene ninguna lectura guardada", error);
-      }
-    };
     fetchSavedReadings();
   }, []);
+
+  const fetchSavedReadings = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/savedCards");
+      setSavedReadings(response.data);
+    } catch (error) {
+      console.error("Error al obtener las lecturas guardadas", error);
+    }
+  };
 
   const deleteSavedReading = async (id) => {
     try {
       await axios.delete(`http://localhost:3000/savedCards/${id}`);
-      setsavedReadings((previousReadings) =>
-        previousReadings.filter((reading) => reading.id !== id)
-      );
+      setSavedReadings((prev) => prev.filter((reading) => reading.id !== id));
     } catch (error) {
-      console.error("No se ha podido eliminar su lectura", error);
+      console.error("No se ha podido eliminar la lectura", error);
     }
   };
 
-  const deleteReading = async () => {
+  const deleteAllReadings = async () => {
     try {
       const response = await axios.get("http://localhost:3000/savedCards");
       const readings = response.data;
@@ -42,37 +43,45 @@ function Historial() {
           axios.delete(`http://localhost:3000/savedCards/${reading.id}`)
         )
       );
-
-      console.log("Todas las lecturas han sido eliminadas con éxito.");
-      setsavedReadings([]); // Limpiar el estado de las lecturas
+      setSavedReadings([]);
     } catch (error) {
       console.error("No se han podido eliminar las lecturas", error);
     }
   };
-  // Modifica el username
-  const modifySavedReading = async (id, updateData) => {
-    try {
-      await axios.patch(`http://localhost:3000/savedCards/${id}`, updateData);
-      console.log("se edito correctamente");
 
-      await Promise.all(
-        readings.map((reading) =>
-          axios.patch(`http://localhost:3000/savedCards/${reading.id}`)
-        )
-      );
-
-      console.log("Todas las lecturas han sido eliminadas con éxito.");
-      setsavedReadings([]); // Limpiar el estado de las lecturas
-    } catch (error) {
-      console.error("No se han podido editar las lecturas", error);
-    }
+  const startEditing = (id, currentName) => {
+    setEditingId(id);
+    setNewUserName(currentName);
   };
 
-  const { userNames } = useUserName();
+  const saveEditedReading = async (id) => {
+    try {
+      const response = await axios.patch(
+        `http://localhost:3000/savedCards/${id}`,
+        { username: newUserName }
+      );
+
+      if (response.status === 200) {
+        setSavedReadings((prev) =>
+          prev.map((reading) =>
+            reading.id === id ? { ...reading, username: newUserName } : reading
+          )
+        );
+        setEditingId(null);
+        setNewUserName("");
+      } else {
+        console.error("Error al actualizar la lectura en el backend");
+      }
+    } catch (error) {
+      console.error("No se ha podido editar la lectura", error);
+    }
+  };
 
   return (
     <>
       <Header />
+      <button onClick={deleteAllReadings}>Eliminar todas las lecturas</button>
+
       <ul>
         {savedReadings.map((reading) => (
           <li key={reading.id}>
@@ -80,23 +89,34 @@ function Historial() {
               icon={deleteIcon}
               actionOnclick={() => deleteSavedReading(reading.id)}
             />
-            <IconButton
-              icon={modifyIcon}
-              actionOnclick={() => modifySavedReading(reading.id)}
-            />
-            {new Date(reading.date).toUTCString()}
-            {userNames.length > 0 && (
-              <ul>
-                {userNames.map((name, index) => (
-                  <li key={index}>{name}</li>
-                ))}
-              </ul>
+
+            {editingId === reading.id ? (
+              <>
+                <input
+                  type="text"
+                  value={newUserName}
+                  onChange={(e) => setNewUserName(e.target.value)}
+                />
+                <button onClick={() => saveEditedReading(reading.id)}>
+                  Guardar
+                </button>
+                <button onClick={() => setEditingId(null)}>Cancelar</button>
+              </>
+            ) : (
+              <>
+                <IconButton
+                  icon={modifyIcon}
+                  actionOnclick={() =>
+                    startEditing(reading.id, reading.username)
+                  }
+                />
+                <p>Fecha: {new Date(reading.date).toUTCString()}</p>
+                <p>{reading.username || "Sin nombre"}</p>
+              </>
             )}
           </li>
         ))}
       </ul>
-      {/* Corregimos el nombre de la función para que sea deleteReading */}
-      <button onClick={deleteReading}>Eliminar todas las lecturas</button>
     </>
   );
 }

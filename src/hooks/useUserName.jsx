@@ -1,24 +1,21 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const useUserName = () => {
-    const [userNames, setUserNames] = useState([]);
+  const [userName, setUserName] = useState(
+    () => localStorage.getItem("userName") || ""
+  );
 
-    useEffect(() => {
-        const storedNames = JSON.parse(localStorage.getItem("userNames")) || [];
-        setUserNames(storedNames);
-    }, []);
+  useEffect(() => {
+    localStorage.setItem("userName", userName);
+  }, [userName]);
 
-    useEffect(() => {
-        localStorage.setItem("userNames", JSON.stringify(userNames));
-    }, [userNames]);
+  const addUserName = (newName) => {
+    if (newName.trim() && newName !== userName) {
+      setUserName(newName);
+    }
+  };
 
-    const addUserName = (newName) => {
-        if (!userNames.includes(newName)) {
-            setUserNames((prevNames) => [...prevNames, newName]);
-        }
-    };
-
-    return { userNames, addUserName };
+  return { userName, addUserName };
 };
 
 export default useUserName;
