@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 const useUserName = () => {
-    const [userNames, setUserNames] = useState("");
+    const [userNames, setUserNames] = useState([]);
 
     useEffect(() => {
         const storedNames = JSON.parse(localStorage.getItem("userNames")) || [];

@@ -7,14 +7,13 @@ import IconButton from "../../components/IconButton/IconButton";
 import useUserName from "../../hooks/useUserName";
 
 function Historial() {
-  const [savedReadings, setSavedReadings] = useState([]);
-  const { userNames } = useUserName();
+  const [savedReadings, setsavedReadings] = useState([]);
 
   useEffect(() => {
     const fetchSavedReadings = async () => {
       try {
         const response = await axios.get("http://localhost:3000/savedCards");
-        setSavedReadings(response.data);
+        setsavedReadings(response.data);
       } catch (error) {
         console.error("Error, no tiene ninguna lectura guardada", error);
       }
@@ -25,7 +24,7 @@ function Historial() {
   const deleteSavedReading = async (id) => {
     try {
       await axios.delete(`http://localhost:3000/savedCards/${id}`);
-      setSavedReadings((previousReadings) =>
+      setsavedReadings((previousReadings) =>
         previousReadings.filter((reading) => reading.id !== id)
       );
     } catch (error) {
@@ -33,7 +32,7 @@ function Historial() {
     }
   };
 
-  const deleteAllReadings = async () => {
+  const deleteReading = async () => {
     try {
       const response = await axios.get("http://localhost:3000/savedCards");
       const readings = response.data;
@@ -45,11 +44,31 @@ function Historial() {
       );
 
       console.log("Todas las lecturas han sido eliminadas con éxito.");
-      setSavedReadings([]);
+      setsavedReadings([]); // Limpiar el estado de las lecturas
     } catch (error) {
       console.error("No se han podido eliminar las lecturas", error);
     }
   };
+  // Modifica el username
+  const modifySavedReading = async (id, updateData) => {
+    try {
+      await axios.patch(`http://localhost:3000/savedCards/${id}`, updateData);
+      console.log("se edito correctamente");
+
+      await Promise.all(
+        readings.map((reading) =>
+          axios.patch(`http://localhost:3000/savedCards/${reading.id}`)
+        )
+      );
+
+      console.log("Todas las lecturas han sido eliminadas con éxito.");
+      setsavedReadings([]); // Limpiar el estado de las lecturas
+    } catch (error) {
+      console.error("No se han podido editar las lecturas", error);
+    }
+  };
+
+  const { userNames } = useUserName();
 
   return (
     <>
@@ -59,9 +78,12 @@ function Historial() {
           <li key={reading.id}>
             <IconButton
               icon={deleteIcon}
-              actionOnClick={() => deleteSavedReading(reading.id)}
+              actionOnclick={() => deleteSavedReading(reading.id)}
             />
-            <IconButton icon={modifyIcon} />
+            <IconButton
+              icon={modifyIcon}
+              actionOnclick={() => modifySavedReading(reading.id)}
+            />
             {new Date(reading.date).toUTCString()}
             {userNames.length > 0 && (
               <ul>
@@ -73,8 +95,8 @@ function Historial() {
           </li>
         ))}
       </ul>
-
-      <button onClick={deleteAllReadings}>Eliminar todas las lecturas</button>
+      {/* Corregimos el nombre de la función para que sea deleteReading */}
+      <button onClick={deleteReading}>Eliminar todas las lecturas</button>
     </>
   );
 }
