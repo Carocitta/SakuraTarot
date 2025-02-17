@@ -6,11 +6,13 @@ import useUserName from "../../hooks/useUserName";
 import { isEditableInputOrTextArea } from "@testing-library/user-event/dist/cjs/utils/index.js";
 
 const Form = () => {
-    const { userName, setUserName } = useUserName("");
+    const { addUserName } = useUserName("");
+    const [name, setName] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const inputRef = useRef(null);
     const setIsPortrait = useOrientation();
+
     const validateName = (name) => {
         if (!name.trim()) {
             return "Este campo es obligatorio.";
@@ -23,13 +25,14 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const errorMessage = validateName(userName);
+        const errorMessage = validateName(name);
         if (errorMessage) {
             setError(errorMessage);
             inputRef.current.focus();
             return;
         }
         setError("");
+        addUserName(name);
         navigate("/pick-a-card");
     };
 
@@ -40,7 +43,7 @@ const Form = () => {
                     type="text"
                     maxLength={10}
                     value={userName}
-                    onChange={(e) => setUserName(e.target.value)}
+                    onChange={(e) => setName(e.target.value)}
                     ref={inputRef}
                     aria-describedby="name-error"
                     aria-invalid={!!error}
