@@ -14,7 +14,7 @@ function Historial() {
         const response = await axios.get("http://localhost:3000/savedCards");
         setsavedReadings(response.data);
       } catch (error) {
-        console.error("Error,no tiene ninguna lectura guardada", error);
+        console.error("Error, no tiene ninguna lectura guardada", error);
       }
     };
     fetchSavedReadings();
@@ -30,11 +30,22 @@ function Historial() {
       console.error("No se ha podido eliminar su lectura", error);
     }
   };
-  const deleteAll = async () => {
+
+  const deleteReading = async () => {
     try {
-      await axios.delete(`http://localhost:3000/savedCards`);
+      const response = await axios.get("http://localhost:3000/savedCards");
+      const readings = response.data;
+
+      await Promise.all(
+        readings.map((reading) =>
+          axios.delete(`http://localhost:3000/savedCards/${reading.id}`)
+        )
+      );
+
+      console.log("Todas las lecturas han sido eliminadas con éxito.");
+      setsavedReadings([]);
     } catch (error) {
-      console.error("No se han podido eliminar todas las lecturas", error);
+      console.error("No se han podido eliminar las lecturas", error);
     }
   };
 
@@ -52,8 +63,9 @@ function Historial() {
             {new Date(reading.date).toUTCString()}
           </li>
         ))}
-        <button onClick={deleteAll}>Eliminar todas las lecturas</button>
       </ul>
+
+      <button onClick={deleteReading}>Eliminar todas las lecturas</button>
     </>
   );
 }
