@@ -1,17 +1,18 @@
 import axios from "axios";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import ReadinPageStyled from "./ReadingPageStyled";
 import Header from "../../components/Header/Header";
 import decoration from "../../assets/images/decorative_underTitle.png";
 import heartsDecoration from "../../assets/images/decorative_underCard.png";
 
-const ReadingPage = () => {
+function ReadingPage() {
   const location = useLocation();
+  const navigate = useNavigate();
   const { past, present, future } = location.state || {};
   const [cards, setCards] = useState({
     past: null,
-    prsent: null,
+    present: null,
     future: null,
   });
 
@@ -32,32 +33,47 @@ const ReadingPage = () => {
     if (future) fetchedCard(future, "future");
   }, [past, present, future]);
 
+  const saveReading = async () => {
+    if (!cards.past || !cards.present || !cards.future) {
+      return;
+    }
+
+    const readingData = {
+      date: new Date().toISOString(),
+      past: {
+        name: cards.past.spanishName,
+        image: cards.past.sakuraCard,
+        meaning: cards.past.meaning,
+      },
+      present: {
+        name: cards.present.spanishName,
+        image: cards.present.sakuraCard,
+        meaning: cards.present.meaning,
+      },
+      future: {
+        name: cards.future.spanishName,
+        image: cards.future.sakuraCard,
+        meaning: cards.future.meaning,
+      },
+    };
+
+    try {
+      axios.post("http://localhost:3000/savedCards", readingData);
+      navigate("/Historial");
+      alert
+    } catch (error) {
+      console.error("Error saving the reading:", error);
+    }
+  };
+
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
 
-  useEffect(() => {
-    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
+    useEffect(() => {
+      const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+      window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const saveReading = () => {
-    const savedReading = JSON.parse(localStorage.getItem("favorite")) || [];
-    const newReading = {
-      past: cards.past,
-      present: cards.present,
-      future: cards.future,
-    };
-
-    localStorage.setItem(
-      "favorite",
-      JSON.stringify([...savedReading, newReading])
-    );
-    console.log(newReading);
-
-    const currentDate = new Date();
-    console.log(currentDate);
-  };
 
   return (
     <ReadinPageStyled>
@@ -123,6 +139,6 @@ const ReadingPage = () => {
       </div>
     </ReadinPageStyled>
   );
-};
+}
 
 export default ReadingPage;
