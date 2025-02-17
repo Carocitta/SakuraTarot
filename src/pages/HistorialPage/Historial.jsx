@@ -7,13 +7,14 @@ import IconButton from "../../components/IconButton/IconButton";
 import useUserName from "../../hooks/useUserName";
 
 function Historial() {
-  const [savedReadings, setsavedReadings] = useState([]);
+  const [savedReadings, setSavedReadings] = useState([]);
+  const { userNames } = useUserName();
 
   useEffect(() => {
     const fetchSavedReadings = async () => {
       try {
         const response = await axios.get("http://localhost:3000/savedCards");
-        setsavedReadings(response.data);
+        setSavedReadings(response.data);
       } catch (error) {
         console.error("Error, no tiene ninguna lectura guardada", error);
       }
@@ -24,7 +25,7 @@ function Historial() {
   const deleteSavedReading = async (id) => {
     try {
       await axios.delete(`http://localhost:3000/savedCards/${id}`);
-      setsavedReadings((previousReadings) =>
+      setSavedReadings((previousReadings) =>
         previousReadings.filter((reading) => reading.id !== id)
       );
     } catch (error) {
@@ -32,7 +33,7 @@ function Historial() {
     }
   };
 
-  const deleteReading = async () => {
+  const deleteAllReadings = async () => {
     try {
       const response = await axios.get("http://localhost:3000/savedCards");
       const readings = response.data;
@@ -44,12 +45,12 @@ function Historial() {
       );
 
       console.log("Todas las lecturas han sido eliminadas con éxito.");
-      setsavedReadings([]);
+      setSavedReadings([]);
     } catch (error) {
       console.error("No se han podido eliminar las lecturas", error);
     }
   };
-  const { userName } = useUserName();
+
   return (
     <>
       <Header />
@@ -58,16 +59,23 @@ function Historial() {
           <li key={reading.id}>
             <IconButton
               icon={deleteIcon}
-              actionOnclick={() => deleteSavedReading(reading.id)}
+              actionOnClick={() => deleteSavedReading(reading.id)}
             />
             <IconButton icon={modifyIcon} />
             {new Date(reading.date).toUTCString()}
-            {userName}
+
+            {userNames.length > 0 && (
+              <ul>
+                {userNames.map((name, index) => (
+                  <li key={index}>{name}</li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>
 
-      <button onClick={deleteReading}>Eliminar todas las lecturas</button>
+      <button onClick={deleteAllReadings}>Eliminar todas las lecturas</button>
     </>
   );
 }
