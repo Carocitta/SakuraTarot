@@ -1,5 +1,5 @@
 import React from 'react';
-import { PopupContainer, Overlay } from './Pop-up.elements';
+import { PopupContainer, Overlay } from './Pop-up.styled';
 
 const Popup = ({ isOpen, onClose, children }) => {
   return (

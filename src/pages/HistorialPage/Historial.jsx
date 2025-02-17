@@ -4,6 +4,7 @@ import axios from "axios";
 import deleteIcon from "../../assets/images/delete-icon.png";
 import modifyIcon from "../../assets/images/modify-icon.png";
 import IconButton from "../../components/IconButton/IconButton";
+import useUserName from "../../hooks/useUserName";
 
 function Historial() {
   const [savedReadings, setsavedReadings] = useState([]);
@@ -48,7 +49,7 @@ function Historial() {
       console.error("No se han podido eliminar las lecturas", error);
     }
   };
-
+  const { userName } = useUserName();
   return (
     <>
       <Header />
@@ -61,6 +62,7 @@ function Historial() {
             />
             <IconButton icon={modifyIcon} />
             {new Date(reading.date).toUTCString()}
+            {userName}
           </li>
         ))}
       </ul>

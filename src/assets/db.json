@@ -1,3 +1,42 @@
 {
-  "savedCards": []
+  "savedCards": [
+    {
+      "id": "1ab9",
+      "date": "2025-02-17T15:29:31.505Z",
+      "past": {
+        "name": "Regreso",
+        "image": "https://i.ibb.co/Hq1H85v/Regreso-Sakura.jpg",
+        "meaning": "Simboliza la repetición de algo pasado, el mirar hacia atrás."
+      },
+      "present": {
+        "name": "La Esperanza",
+        "image": "https://i.ibb.co/sPmXJ7n/La-esperanza.jpg",
+        "meaning": "Simboliza la esperanza de un amor."
+      },
+      "future": {
+        "name": "La Nada",
+        "image": "https://i.ibb.co/zG7fpxp/Nada-Sakura.jpg",
+        "meaning": "Simboliza el espacio vacío, la nada, lo negativo."
+      }
+    },
+    {
+      "id": "a9d3",
+      "date": "2025-02-17T15:29:39.421Z",
+      "past": {
+        "name": "Borrar",
+        "image": "https://i.ibb.co/xGT9X0p/Borrar-Sakura.jpg",
+        "meaning": "Representa la desaparición, el olvido."
+      },
+      "present": {
+        "name": "Tiempo",
+        "image": "https://i.ibb.co/p4kcRMS/Tiempo-Sakura.jpg",
+        "meaning": " Simboliza el paso del tiempo, su escasez."
+      },
+      "future": {
+        "name": "Tormenta",
+        "image": "https://i.ibb.co/CKKCGQj/Tormenta-Sakura.jpg",
+        "meaning": "Simboliza el caos, los problemas."
+      }
+    }
+  ]
 }

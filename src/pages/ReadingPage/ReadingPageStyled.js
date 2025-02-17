@@ -6,6 +6,7 @@ const ReadinPageStyled = styled.section`
   .cards-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
     padding: 0.5rem;
     gap: 8rem;
@@ -13,14 +14,13 @@ const ReadinPageStyled = styled.section`
     width: 90%;
 
     @media (max-width: 1024px) and (orientation: landscape) {
-      gap: 10%;
+      gap: 2rem;
     }
 
     @media (max-width: 768px) {
       align-items: center;
-      gap: 2rem;
       width: 100%;
-      margin-top: 5%;
+      margin-top: 3%;
     }
   }
 

@@ -14,18 +14,22 @@ export const Title = styled.div`
   flex-direction: column;  
   align-items: center;  
   justify-content: flex-end;  
-  padding: 120px;
+  padding: 7rem;
   font-size: 1.8rem;
-  font-weight: medium;
+  font-weight: initial;
   text-align: center;
   height: 100%;  
   margin-top: 7rem;
 
   @media (max-width: 1024px) and (orientation: landscape) {
-    height: 50%;
-    /* margin-top: 2rem; */
-    justify-content: center;  
-    padding: 12px;
+    justify-content: center; 
+    padding: 8rem;
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    justify-content: center; 
+    padding: 2rem;
     font-size: 1.2rem;
   }
 `;
@@ -36,7 +40,12 @@ font-size: 1.5rem;
 text-align: center;
 
 @media (max-width: 1024px) and (orientation: landscape) {
-    height: 50%;
+    justify-content: center;  
+    padding: 1px;
+    font-size: 1.2rem;
+  }
+
+@media (max-width: 768px) and (orientation: landscape) {
     justify-content: center;  
     padding: 1px;
     font-size: 1rem;

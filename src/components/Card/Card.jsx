@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledCard } from "./Card.elements";
+import { StyledCard } from "./Card.styled";
 
 const Card = ({ cardInput, rotation, shift, $zIndex, externalHandleOnClickEvent }) => {
     if (cardInput.cardsReverse && cardInput.cardsReverse.sakuraReverse) {

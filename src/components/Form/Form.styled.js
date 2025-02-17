@@ -16,6 +16,10 @@ export const FormContainer = styled.div`
     flex-wrap: wrap;
     margin: 0;
     justify-content: center;
+   
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      font-size: 1.2rem;
+    }
   }
     
   p.errorText{
@@ -35,6 +39,15 @@ export const Input = styled.input`
   border: 1px solid;
   border-color: var(--black);
   border-radius: 4px;
+
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    height: 3.4rem;
+  }
+  
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    height: 3rem;
+    font-size: large;
+  }
 `;
 
 export const SubmitButton = styled.button`
@@ -50,5 +63,13 @@ export const SubmitButton = styled.button`
 
   &:hover {
     background-color: var(--lightpurple);
+  }
+
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    height: 3.4rem;
+  }
+
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    height: 3rem;
   }
 `;
