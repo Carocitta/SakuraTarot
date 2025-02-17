@@ -13,7 +13,7 @@ const AppPageStyled = styled.main`
     flex-direction: column;
     align-items: center;
     width: 90%;
-    max-width: auto;
+    max-width: fit-content;
   }
 
   .text-container {

@@ -1,3 +1,42 @@
 {
-  "savedCards": []
+  "savedCards": [
+    {
+      "id": "eb3c",
+      "date": "2025-02-17T14:16:39.439Z",
+      "past": {
+        "name": "Salto",
+        "image": "https://i.ibb.co/QdT7ZjS/Salto-Sakura.jpg",
+        "meaning": " Representa la evasión de los problemas."
+      },
+      "present": {
+        "name": "Flote",
+        "image": "https://i.ibb.co/0VZ0RGV/Flote-Sakura.jpg",
+        "meaning": " Simboliza la capacidad de tener una visión general sobre algo, o de evadirse de un problema."
+      },
+      "future": {
+        "name": "Sombra",
+        "image": "https://i.ibb.co/q7dgnKZ/Sombra-Sakura.jpg",
+        "meaning": "Indica el sigilo."
+      }
+    },
+    {
+      "id": "f67c",
+      "date": "2025-02-17T14:16:48.622Z",
+      "past": {
+        "name": "Agua",
+        "image": "https://i.ibb.co/HxLpWy5/Agua-Sakura.jpg",
+        "meaning": "Simboliza los sentimientos, la expansión, la habilidad de la adivinación."
+      },
+      "present": {
+        "name": "Grande",
+        "image": "https://i.ibb.co/J2NYWjS/Grande-Sakura.jpg",
+        "meaning": "Esta carta simboliza el crecimiento, el avance, el éxito."
+      },
+      "future": {
+        "name": "Ilusión",
+        "image": "https://i.ibb.co/b5rxvqT/Ilusi-n-Sakura.jpg",
+        "meaning": "Simboliza la esperanza, las ganas, la alegría."
+      }
+    }
+  ]
 }

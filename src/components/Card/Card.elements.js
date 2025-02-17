@@ -26,7 +26,8 @@ export const StyledCard = styled.div`
     filter: grayscale(1) drop-shadow(12px 12px 8px black);
    
   }
-  @media (max-width: 844px) and (orientation: landscape) {
+    
+  @media (max-width: 1024px) and (orientation: landscape) {
     height: 60px;
   }
 
