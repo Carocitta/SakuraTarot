@@ -1,3 +1,118 @@
 {
-  "savedCards": []
+  "savedCards": [
+    {
+      "id": "6183",
+      "date": "2025-02-18T11:52:38.068Z",
+      "past": {
+        "name": "Viento",
+        "image": "https://i.ibb.co/k5HVTP7/Viento-Sakura.jpg",
+        "meaning": "Simboliza el intelecto, la sabiduría, la meteorología muestra información valiosa."
+      },
+      "present": {
+        "name": "Canción",
+        "image": "https://i.ibb.co/3kmsTBj/Canci-n-Sakura.jpg",
+        "meaning": " Simboliza la paz, la tranquilidad y la alegría."
+      },
+      "future": {
+        "name": "Escudo",
+        "image": "https://i.ibb.co/8KHfgds/Escudo-Sakura.jpg",
+        "meaning": "Simboliza la protección, tanto personal como de algo que nosotros consideremos muy valioso."
+      }
+    },
+    {
+      "id": "d387",
+      "date": "2025-02-18T11:52:43.854Z",
+      "past": {
+        "name": "Viento",
+        "image": "https://i.ibb.co/k5HVTP7/Viento-Sakura.jpg",
+        "meaning": "Simboliza el intelecto, la sabiduría, la meteorología muestra información valiosa."
+      },
+      "present": {
+        "name": "Canción",
+        "image": "https://i.ibb.co/3kmsTBj/Canci-n-Sakura.jpg",
+        "meaning": " Simboliza la paz, la tranquilidad y la alegría."
+      },
+      "future": {
+        "name": "Escudo",
+        "image": "https://i.ibb.co/8KHfgds/Escudo-Sakura.jpg",
+        "meaning": "Simboliza la protección, tanto personal como de algo que nosotros consideremos muy valioso."
+      }
+    },
+    {
+      "id": "345b",
+      "date": "2025-02-18T11:52:44.853Z",
+      "past": {
+        "name": "Viento",
+        "image": "https://i.ibb.co/k5HVTP7/Viento-Sakura.jpg",
+        "meaning": "Simboliza el intelecto, la sabiduría, la meteorología muestra información valiosa."
+      },
+      "present": {
+        "name": "Canción",
+        "image": "https://i.ibb.co/3kmsTBj/Canci-n-Sakura.jpg",
+        "meaning": " Simboliza la paz, la tranquilidad y la alegría."
+      },
+      "future": {
+        "name": "Escudo",
+        "image": "https://i.ibb.co/8KHfgds/Escudo-Sakura.jpg",
+        "meaning": "Simboliza la protección, tanto personal como de algo que nosotros consideremos muy valioso."
+      }
+    },
+    {
+      "id": "d67b",
+      "date": "2025-02-18T11:52:45.850Z",
+      "past": {
+        "name": "Viento",
+        "image": "https://i.ibb.co/k5HVTP7/Viento-Sakura.jpg",
+        "meaning": "Simboliza el intelecto, la sabiduría, la meteorología muestra información valiosa."
+      },
+      "present": {
+        "name": "Canción",
+        "image": "https://i.ibb.co/3kmsTBj/Canci-n-Sakura.jpg",
+        "meaning": " Simboliza la paz, la tranquilidad y la alegría."
+      },
+      "future": {
+        "name": "Escudo",
+        "image": "https://i.ibb.co/8KHfgds/Escudo-Sakura.jpg",
+        "meaning": "Simboliza la protección, tanto personal como de algo que nosotros consideremos muy valioso."
+      }
+    },
+    {
+      "id": "0546",
+      "date": "2025-02-18T11:52:46.164Z",
+      "past": {
+        "name": "Viento",
+        "image": "https://i.ibb.co/k5HVTP7/Viento-Sakura.jpg",
+        "meaning": "Simboliza el intelecto, la sabiduría, la meteorología muestra información valiosa."
+      },
+      "present": {
+        "name": "Canción",
+        "image": "https://i.ibb.co/3kmsTBj/Canci-n-Sakura.jpg",
+        "meaning": " Simboliza la paz, la tranquilidad y la alegría."
+      },
+      "future": {
+        "name": "Escudo",
+        "image": "https://i.ibb.co/8KHfgds/Escudo-Sakura.jpg",
+        "meaning": "Simboliza la protección, tanto personal como de algo que nosotros consideremos muy valioso."
+      }
+    },
+    {
+      "id": "c07d",
+      "date": "2025-02-18T11:52:47.506Z",
+      "past": {
+        "name": "Viento",
+        "image": "https://i.ibb.co/k5HVTP7/Viento-Sakura.jpg",
+        "meaning": "Simboliza el intelecto, la sabiduría, la meteorología muestra información valiosa."
+      },
+      "present": {
+        "name": "Canción",
+        "image": "https://i.ibb.co/3kmsTBj/Canci-n-Sakura.jpg",
+        "meaning": " Simboliza la paz, la tranquilidad y la alegría."
+      },
+      "future": {
+        "name": "Escudo",
+        "image": "https://i.ibb.co/8KHfgds/Escudo-Sakura.jpg",
+        "meaning": "Simboliza la protección, tanto personal como de algo que nosotros consideremos muy valioso."
+      }
+    }
+  ]
 }
