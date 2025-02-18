@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import AppPageStyled from "./App.styled";
+import { OrientationWarning } from "./components/Warning/Warning";
+import image from "../src/assets/images/kero_logo.png";
+import Form from "./components/Form/Form";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <AppPageStyled>
+      <OrientationWarning />
+      <div className="content-container">
+        <div className="title-container">
+          <h1 className="main-title">SAKURA TAROT</h1>
+          <img className="kero-logo" src={image}></img>
+        </div>
+        <div className="text-container">
+          <p>El poder de las cartas Clow te llama!</p>
+          <p> Introduce tu nombre y desata tu magia!</p>
+          <Form />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </AppPageStyled>
+  );
 }
 
-export default App
+export default App;

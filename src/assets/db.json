@@ -1,0 +1,24 @@
+{
+  "savedCards": [
+    {
+      "id": "dbe2",
+      "date": "2025-02-18T11:59:55.515Z",
+      "username": "dsg",
+      "past": {
+        "name": "Sueño",
+        "image": "https://i.ibb.co/qgCj1mQ/Sue-o-Sakura.jpg",
+        "meaning": " Simboliza el futuro, la adivinación, los sueños premonitorios."
+      },
+      "present": {
+        "name": "Movimiento",
+        "image": "https://i.ibb.co/R0W9hTz/Movimiento-Sakura.jpg",
+        "meaning": "Simboliza un cambio, un movimiento."
+      },
+      "future": {
+        "name": "Burbujas",
+        "image": "https://i.ibb.co/8sQ5Yrg/Burbujas-Sakura.jpg",
+        "meaning": " Simboliza la multitud, la unión, el camuflaje."
+      }
+    }
+  ]
+}
