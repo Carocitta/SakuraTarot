@@ -4,6 +4,7 @@ import axios from "axios";
 import deleteIcon from "../../assets/images/delete-icon.png";
 import modifyIcon from "../../assets/images/modify-icon.png";
 import IconButton from "../../components/IconButton/IconButton";
+import { ListDiv, DeleteBttn } from "./Historial.styled";
 
 function Historial() {
   const [savedReadings, setSavedReadings] = useState([]);
@@ -79,42 +80,46 @@ function Historial() {
   return (
     <>
       <Header />
-      <ul>
-        {savedReadings.map((reading) => (
-          <li key={reading.id}>
-            <IconButton
-              icon={deleteIcon}
-              actionOnclick={() => deleteSavedReading(reading.id)}
-            />
+      <ListDiv>
+        <ul>
+          {savedReadings.map((reading) => (
+            <li key={reading.id}>
+              <IconButton
+                icon={deleteIcon}
+                actionOnclick={() => deleteSavedReading(reading.id)}
+              />
 
-            {editingId === reading.id ? (
-              <>
-                <input
-                  type="text"
-                  value={newUserName}
-                  onChange={(e) => setNewUserName(e.target.value)}
-                />
-                <button onClick={() => saveEditedReading(reading.id)}>
-                  Guardar
-                </button>
-                <button onClick={() => setEditingId(null)}>Cancelar</button>
-              </>
-            ) : (
-              <>
-                <IconButton
-                  icon={modifyIcon}
-                  actionOnclick={() =>
-                    startEditing(reading.id, reading.username)
-                  }
-                />
-                {new Date(reading.date).toUTCString()}
-                <p>{reading.username || "Sin nombre"}</p>
-              </>
-            )}
-          </li>
-        ))}
-        <button onClick={deleteAllReadings}>Eliminar todas las lecturas</button>
-      </ul>
+              {editingId === reading.id ? (
+                <>
+                  <input
+                    type="text"
+                    value={newUserName}
+                    onChange={(e) => setNewUserName(e.target.value)}
+                  />
+                  <button onClick={() => saveEditedReading(reading.id)}>
+                    Guardar
+                  </button>
+                  <button onClick={() => setEditingId(null)}>Cancelar</button>
+                </>
+              ) : (
+                <>
+                  <IconButton
+                    icon={modifyIcon}
+                    actionOnclick={() =>
+                      startEditing(reading.id, reading.username)
+                    }
+                  />
+                  {new Date(reading.date).toUTCString()}
+                  <p>{reading.username || "Sin nombre"}</p>
+                </>
+              )}
+            </li>
+          ))}
+          <DeleteBttn onClick={deleteAllReadings}>
+            Eliminar todas las lecturas
+          </DeleteBttn>
+        </ul>
+      </ListDiv>
     </>
   );
 }

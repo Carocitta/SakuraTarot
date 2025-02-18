@@ -1,3 +1,44 @@
 {
-  "savedCards": []
+  "savedCards": [
+    {
+      "id": "08ac",
+      "date": "2025-02-18T08:48:57.510Z",
+      "username": "carol",
+      "past": {
+        "name": "Salto",
+        "image": "https://i.ibb.co/QdT7ZjS/Salto-Sakura.jpg",
+        "meaning": " Representa la evasión de los problemas."
+      },
+      "present": {
+        "name": "Candado",
+        "image": "https://i.ibb.co/tc0kMqW/Candado-Sakura.jpg",
+        "meaning": " Simboliza la soledad, la ignorancia, el misterio."
+      },
+      "future": {
+        "name": "Espejo",
+        "image": "https://i.ibb.co/55bYWJy/Espejo-Sakura.jpg",
+        "meaning": " Simboliza el reflejo, la protección."
+      }
+    },
+    {
+      "id": "d130",
+      "date": "2025-02-18T08:49:52.909Z",
+      "username": "caca",
+      "past": {
+        "name": "Candado",
+        "image": "https://i.ibb.co/tc0kMqW/Candado-Sakura.jpg",
+        "meaning": " Simboliza la soledad, la ignorancia, el misterio."
+      },
+      "present": {
+        "name": "Aro",
+        "image": "https://i.ibb.co/mHdYQy5/Aro-Sakura.jpg",
+        "meaning": "Simboliza la continuidad, la perseverancia, una prisión."
+      },
+      "future": {
+        "name": "Poder",
+        "image": "https://i.ibb.co/HVdcRrf/Poder-Sakura.jpg",
+        "meaning": " Esta carta simboliza la superación de obstáculos."
+      }
+    }
+  ]
 }
